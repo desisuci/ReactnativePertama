@@ -4,6 +4,7 @@ import {
     Text
 } from 'react-native';
 
+
 class PropEx extends React.Component {
     render() {
         return (
@@ -13,11 +14,6 @@ class PropEx extends React.Component {
                 <Text> Alamat : {this.props.alamat} </Text>
                 <Text> Telp : {this.props.telp} </Text>
                 <Text> Email : {this.props.email} </Text>
-                <Text></Text>
-
-                <Text>Nama : {this.props.namaRuang} </Text>
-                <Text>Rumus Luas : {this.props.luas} </Text>
-                <Text>Rumus Keliling : {this.props.keliling} </Text>
             </View>
 
         );
