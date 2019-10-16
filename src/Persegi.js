@@ -19,8 +19,7 @@ class Persegi extends React.Component {
 
         if (this.state.rumus == 'luas') {
             let luas = parseInt(panjang) * parseInt(lebar);
-            /*menghitung luas persegi variabel panjang dan luas harus di
-            konversikan ke int karena asalnya berupa String*/
+            /*menghitung luas persegi variabel panjang dan luas harus dikonversikan ke int karena asalnya berupa String*/
             this.setState({ tipe: luas }) //set state luas
         } else if (this.state.rumus == 'keliling') {
             let keliling = 2 * parseInt(panjang) + parseInt(lebar);
