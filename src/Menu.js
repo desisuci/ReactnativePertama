@@ -56,13 +56,8 @@ const styles = StyleSheet.create({
 //cara ka sule
 
 class Menu extends React.Component {
-    state = { tipe: 'ruang' }
+    state = { tipe: null }
 
-    componentWillMount() {
-        this.setState({
-            tipe: 'ruang'
-        })
-    }
     renderElement() {
         if (this.state.tipe == 'ruang') {
             //Return the firstscreen as a child to set in parent View
