@@ -1,54 +1,33 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, Text, ImageBackground } from 'react-native';
+
+import { styles } from './styleProfil'
 
 export default class ProfilColor extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.cardContainer}>
-                    <View style={styles.cardImageContainer}>
-                        <Image style={styles.cardImage}
-                            source={require('../assets/userId.png')} />
+                <ImageBackground style={styles.bgImage} source={require('../assets/background.png')}>
+                    <View style={styles.cardContainer}>
+                        <View style={styles.cardImageContainer}>
+                            <Image style={styles.cardImage}
+                                source={require('../assets/userFemale.png')} />
+                        </View>
+                        <Text style={styles.cardName}>Desi Suci Ramadhani</Text>
+                        <View style={styles.cardOccupationContainer}>
+                            <Text style={styles.cardOccupation}>
+                                React Native Developer</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.cardDescription}>
+                                Desi is a really great JavaScript developer.
+                                She loves using JS to build React Native applications
+                            for IOS and Android.</Text>
+                        </View>
                     </View>
-                </View>
+                </ImageBackground>
             </View>
         );
     }
 }
-
-const profileCardColor = 'powderblue';
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    cardContainer: {
-        borderColor: 'black',
-        borderWidth: 3,
-        borderStyle: 'solid',
-        paddingTop: 50,
-        borderRadius: 20,
-        alignItems: 'center',
-        backgroundColor: profileCardColor,
-        width: 300,
-        height: 400
-    },
-
-    cardImageContainer: {
-        backgroundColor: 'white',
-        borderWidth: 3,
-        paddingTop: 1,
-        alignItems: 'center',
-        borderColor: 'black',
-        width: 88,
-        height: 88,
-        borderRadius: 60
-    },
-
-    cardImage: {
-        width: 80, height: 80
-    }
-});
 
